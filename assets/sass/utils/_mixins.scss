@@ -1,0 +1,19 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//Keyframes
+@mixin sliderLeft {
+    to {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

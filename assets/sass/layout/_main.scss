@@ -1,0 +1,38 @@
+main {
+    display: grid;
+    grid-template-rows: 100vh 150vh 40vh;
+    grid-template-areas:
+        "header"
+        "section"
+        "footer"
+    ;
+
+    @media screen and (max-width: 1200px) {
+        grid-template-rows: 100vh 200vh 40vh;
+    }
+    @media screen and (max-width: 850px) {
+        grid-template-rows: 100vh 350vh 40vh;
+    }
+
+    .toggle-responsive {
+        display: none;
+
+        @media screen and (max-width: 900px) {
+            display: block;
+            position: fixed;
+            z-index: 5;
+        }
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    section {
+        grid-area: section;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}

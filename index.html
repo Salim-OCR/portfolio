@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/sass/style.css">
+    <link rel="shortcut icon" href="./assets/images/logo1.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/5e70f60eb5.js" crossorigin="anonymous"></script>
+    <title>Porfolio Salim</title>
+  </head>
+
+  <body>
+    <!-- <span class="cursor"></span> -->
+    <div id="side-bar">
+      <div class="toggle-btn" id="btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul>
+        <li><a href="#portfolio">portfolios</a></li>
+        <li><a href="#contact">contact</a></li>
+        <li><a href="#home">acceuil</a></li>
+      </ul>
+    </div>
+    <main class="content">
+      <div class="toggle toggle-responsive">
+        <input type="checkbox" class="checkbox" id="dark-mode-responsive">
+        <label for="dark-mode-responsive" class="label">
+          <i class="fa fa-solid fa-moon"></i>
+          <i class="fa fa-solid fa-sun"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
+      <header id="home">
+        <!-- id="home" -->
+        <nav id="navbar">
+          <ul>
+            <li><a href="#portfolio">porfolios</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#home">accueil</a></li>
+          </ul>
+
+          <div class="logo">
+            <img src="./assets/images/logo1.png" alt="logo">
+          </div>
+          <div class="toggle">
+            <input type="checkbox" class="checkbox" id="dark-mode">
+            <label for="dark-mode" class="label">
+              <i class="fa fa-solid fa-moon"></i>
+              <i class="fa fa-solid fa-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
+        </nav>
+
+        <div class="description">
+          <p id="description">
+            <span id="myText"></span>
+          </p>
+        </div>
+
+        <div class="titre">
+          <h1>dev. web <br> front-end</h1>
+        </div>
+
+        <div class="btn">
+          <a href="./assets/document/salim-cv.pdf" target="_blank" rel="noopener noreferrer">Voici mon C.V</a>
+        </div>
+      </header>
+
+      <section id="portfolio">
+        <h2>mes portfolios</h2>
+        <div class="slider-container">
+          <ul>
+            <li class="img 1">
+              <a href="https://salim-ocr.github.io/IBRAHIMISalim_03_09062021/index.html" target="_blank" class="code1">
+                <img src="./assets/images/restaurant-ohmyfood.png" alt="Image 1">
+              </a>
+              <p class="txt_slider">oh my food</p>
+            </li>
+            <li class="img 2">
+              <a href="https://salim-ocr.github.io/Salim_04_27072021/" target="_blank" class="code1">
+                <img src="./assets/images/la-chouette-seo.png" alt="Image 2">
+              </a>
+              <p class="txt_slider">la chouette</p>
+            </li>
+            <!-- <li class="img 3">
+              <a href="https://salim-ocr.github.io/Helium/" target="_blank" class="code1">
+                <img src="./assets/images/helium.png" alt="Image 3">
+              </a>
+              <p class="txt_slider">helium</p>
+            </li> -->
+            <li class="img 4">
+              <a href="https://salim-ocr.github.io/Helium/" target="_blank" class="code1">
+                <img src="./assets/images/la-montagne.png" alt="Image 4">
+              </a>
+              <p class="txt_slider">la montagne</p>
+            </li>
+            <li class="img 5">
+              <a href="https://salim-ocr.github.io/Helium/" target="_blank" class="code1">
+                <img src="./assets/images/restaurant.png" alt="Image 5">
+              </a>
+              <p class="txt_slider">restaurant</p>
+            </li>
+            <li class="img 6">
+              <a href="https://salim-ocr.github.io/Helium/" target="_blank" class="code1">
+                <img src="./assets/images/run.png" alt="Image 6">
+              </a>
+              <p class="txt_slider">run</p>
+            </li>
+            <li class="img 7">
+              <a href="https://salim-ocr.github.io/bubble/" target="_blank" class="code2">
+                <img src="./assets/images/BUBBLE.png" alt="Image 7">
+              </a>
+              <p class="txt_slider">bubble shoot</p>
+            </li>
+            <li class="img 8">
+              <a href="https://salim-ocr.github.io/holidayNight/" target="_blank" class="code2">
+                <img src="./assets/images/HOLIDAY.png" alt="Image 8">
+              </a>
+              <p class="txt_slider">holiday</p>
+            </li>
+            <li class="img 9">
+              <a href="https://salim-ocr.github.io/todolist/" target="_blank" class="code2">
+                <img src="./assets/images/TODOLIST.png" alt="Image 9">
+              </a>
+              <p class="txt_slider">todolist</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <div class="profil"></div>
+        <div id="contact">
+          <h3>Me contacter</h3>
+          <p>Vous pouvez me contacter par mail, je serais ravi de vous répondre dans les meilleurs délais.</p>
+          <p>Cliquer sur ce logo pour m'écrire</p>
+          <a href="mailto:salim.ibrahimi@outlook.fr">
+            <img class="logo" src="./assets/images/Mail_(Apple)_logo.png" alt="logo email"></a>
+        </div>
+      </footer>
+    </main>
+    <script src="./assets/js/modeNuit.js"></script>
+    <script src="./assets/js/sideBar.js"></script>
+    <script src="./assets/js/txtAuto.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+
+</html>

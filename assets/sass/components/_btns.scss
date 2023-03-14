@@ -1,0 +1,30 @@
+.btn {
+    grid-area: btn;
+    @include center;
+    width: 80%;
+    max-width: 150px;
+    border: 1px solid;
+    padding: 10px;
+    height: 50px;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    a {
+        color: $color1;
+        letter-spacing: .9px;
+    }
+
+    &:hover {
+        background: transparent;
+        border: 1px solid $color5;
+        
+        &>a {
+            transform: scale(1.05);
+            color: $color5;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+@import '../utils/mixins';
+@import '../components/modeNuit';
+@import '../components/btns';
+@import '../components/sideBar';
+
+header {
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 6vh 80vh 14vh;
+    grid-template-areas:
+        "nav nav"
+        "h1 profil"
+        "btn btn";
+
+    @media screen and (max-width: 1500px) {
+        grid-template-columns: 40% 60%;
+    }
+
+    @media screen and (max-width: 1130px) {
+        grid-template-rows: 6vh 34vh 55vh 5vh;
+        grid-template-areas:
+            "nav nav"
+            "h1 h1"
+            "profil profil"
+            "btn btn";
+    }
+
+    @media screen and (max-width: 900px) {
+        grid-template-rows: 20vh 70vh 10vh;
+        grid-template-areas:
+            "h1 h1"
+            "profil profil"
+            "btn btn";
+    }
+
+    nav {
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: 80% 10% 10%;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid $color2;
+        top: 0px;
+        transition: 0.3s;
+        z-index: 3;
+        background: $bg1;
+
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                width: 200px;
+                font-size: 1.1rem;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    background: $bg3;
+                    border-left: 1px solid $color2;
+                    border-right: 1px solid $color2;
+                }
+
+                a {
+                    @include center;
+                    height: 100%;
+                    color: $color1;
+                }
+            }
+        }
+
+        .logo {
+            height: auto;
+            width: 100%;
+            @include center;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    .description {
+        grid-area: profil;
+        width: 85%;
+        margin: 0 auto;
+        transform: translateY(60px);
+        position: relative;
+
+        @media screen and (max-width: 1200px) {
+            width: 95%;
+        }
+
+        @media screen and (max-width: 1130px) {
+            transform: translateY(0px);
+        }
+
+        @media screen and (max-width: 900px) {
+            transform: translateY(80px);
+        }
+
+        @media screen and (max-width: 600px) {
+            transform: translateY(15px);
+        }
+
+        #description {
+            margin-top: 15px;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            box-shadow: 3px -2px 4px 1px rgba(12, 149, 164, 0.578);
+            font-weight: 100;
+            line-height: 39px;
+            text-align: left;
+
+            @media screen and (max-width: 1550px) {
+                // line-height: 37px;
+                margin-top: 0px;
+            }
+            @media screen and (max-width: 1230px) {
+                line-height: 35px;
+            }
+            @media screen and (max-width: 550px) {
+                line-height: 30px;
+            }
+        }
+    }
+
+    .titre {
+        grid-area: h1;
+        @include center;
+
+        h1 {
+            font-size: clamp(4rem, 8vw, 11rem);
+            text-shadow: 1px 2px 3px $color1;
+            text-transform: uppercase;
+        }
+    }
+}

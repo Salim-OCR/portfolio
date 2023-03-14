@@ -1,0 +1,129 @@
+@import '../components/slider';
+
+section {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 10vh 140vh;
+    grid-template-areas:
+        "h2"
+        "slider"
+    ;
+
+    h2 {
+        grid-area: h2;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        text-align: left;
+        letter-spacing: 1rem;
+        color: $color1;
+        text-shadow: 1px 1px 1px $color1;
+
+    }
+
+    .slider-container {
+        grid-area: slider;
+        max-width: 1500px;
+        margin: 0 auto 70px;
+
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 45vh 45vh 45vh;
+
+            @media screen and (max-width: 1200px) {
+                grid-template-columns: 50% 50%;
+                grid-template-rows: repeat(4, 45vh);
+            }
+
+            @media screen and (max-width: 850px) {
+                // display: block;
+                grid-template-columns: 1fr;
+                width: 95%;
+                margin: 0 auto;
+            }
+
+            li {
+                margin: 25px;
+                transition: .3s ease-in-out;
+                border-radius: 15px;
+
+                @media screen and (max-width: 850px) {
+                    margin: 45px 0;
+                    height: 30vh;
+                }
+
+                a {
+                    border-radius: 15px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 15px;
+                        object-fit: cover;
+                    }
+                }
+
+                .code1 {
+
+                    &:hover {
+                        transition: .3s ease-in-out;
+
+                        &::before {
+                            content: "code: html css (sass)";
+                            @include center;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            border-radius: 15px;
+                            opacity: .8;
+                            background: $bg2;
+                            color: $color3;
+                            text-transform: uppercase;
+                            font-weight: 100;
+                        }
+
+                        &::after {
+                            content: "cliquez pour voir le lien";
+                            text-transform: lowercase;
+                            color: $color2;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            padding: 20px;
+                        }
+                    }
+                }
+
+                .code2 {
+                    @extend .code1;
+
+                    &:hover {
+                        &::before {
+                            content: 'code : javascripte'
+                        }
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 1px 3px 3px $color1;
+
+                    p {
+                        color: $color3;
+                    }
+                }
+
+                p {
+                    text-transform: uppercase;
+                }
+
+            }
+        }
+    }
+}
