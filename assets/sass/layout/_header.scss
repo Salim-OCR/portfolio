@@ -35,6 +35,14 @@ header {
             "btn btn";
     }
 
+    @media screen and (max-width: 700px) {
+        grid-template-rows: 30vh 65vh 5vh;
+        grid-template-areas:
+            "h1 h1"
+            "profil profil"
+            "btn btn";
+    }
+
     nav {
         grid-area: nav;
         display: grid;
@@ -105,29 +113,45 @@ header {
             transform: translateY(80px);
         }
 
-        @media screen and (max-width: 600px) {
-            transform: translateY(15px);
-        }
-
         #description {
-            margin-top: 15px;
-            padding: 20px;
+            padding: 7px;
             border-radius: 5px;
-            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-size: clamp(1.5rem, 1.5vw, 2rem);
             box-shadow: 3px -2px 4px 1px rgba(12, 149, 164, 0.578);
             font-weight: 100;
-            line-height: 39px;
+            line-height: 40px;
             text-align: left;
 
+
             @media screen and (max-width: 1550px) {
-                // line-height: 37px;
                 margin-top: 0px;
             }
+
             @media screen and (max-width: 1230px) {
                 line-height: 35px;
             }
-            @media screen and (max-width: 550px) {
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+        }
+
+        .description-responsive {
+            display: none;
+
+            @media screen and (max-width: 700px) {
+                display: block;
+                border-radius: 5px;
+                box-shadow: 3px -2px 4px 1px rgba(12, 149, 164, 0.578);
+                text-align: left;
                 line-height: 30px;
+                font-size: clamp(1rem, 2.5vw, 1.5rem);
+                padding: 5px;
+            }
+
+            @media screen and (max-width: 480px) {
+                transform: translateY(-100px);
+                line-height: 25px;
             }
         }
     }
@@ -137,7 +161,7 @@ header {
         @include center;
 
         h1 {
-            font-size: clamp(4rem, 8vw, 11rem);
+            font-size: clamp(3.3rem, 6vw, 9rem);
             text-shadow: 1px 2px 3px $color1;
             text-transform: uppercase;
         }

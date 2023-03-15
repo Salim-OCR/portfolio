@@ -10,6 +10,9 @@ main {
     @media screen and (max-width: 1200px) {
         grid-template-rows: 100vh 200vh 40vh;
     }
+    // @media screen and (max-width: 900px) {
+    //     display: block;
+    // }
     @media screen and (max-width: 850px) {
         grid-template-rows: 100vh 350vh 40vh;
     }

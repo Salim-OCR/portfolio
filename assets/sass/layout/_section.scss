@@ -42,10 +42,10 @@ section {
             }
 
             @media screen and (max-width: 850px) {
-                // display: block;
-                grid-template-columns: 1fr;
-                width: 95%;
-                margin: 0 auto;
+                display: block;
+                // grid-template-columns: 1fr;
+                // width: 95%;
+                // margin: 0 auto;
             }
 
             li {
@@ -54,8 +54,8 @@ section {
                 border-radius: 15px;
 
                 @media screen and (max-width: 850px) {
-                    margin: 45px 0;
-                    height: 30vh;
+                    margin: 50px auto 10px;
+                    height: 35vh;
                 }
 
                 a {
