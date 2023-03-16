@@ -60,6 +60,11 @@ main {
   grid-template-rows: 100vh 150vh 40vh;
   grid-template-areas: "header" "section" "footer";
 }
+@media screen and (max-width: 1230px) and (max-height: 600px) {
+  main {
+    grid-template-rows: 200vh 150vh 40vh;
+  }
+}
 @media screen and (max-width: 1200px) {
   main {
     grid-template-rows: 100vh 200vh 40vh;
@@ -68,6 +73,36 @@ main {
 @media screen and (max-width: 850px) {
   main {
     grid-template-rows: 100vh 350vh 40vh;
+  }
+}
+@media screen and (max-width: 950px) and (max-height: 450px) {
+  main {
+    grid-template-rows: 180vh 350vh 40vh;
+  }
+}
+@media screen and (max-width: 930px) and (max-height: 420px) {
+  main {
+    grid-template-rows: 180vh 210vh 40vh;
+  }
+}
+@media screen and (max-width: 750px) and (max-height: 550px) {
+  main {
+    grid-template-rows: 170vh 380vh 40vh;
+  }
+}
+@media screen and (max-width: 750px) and (max-height: 360px) {
+  main {
+    grid-template-rows: 200vh 420vh 40vh;
+  }
+}
+@media screen and (max-width: 845px) and (max-height: 390px) {
+  main {
+    grid-template-rows: 200vh 420vh 40vh;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 670px) {
+  main {
+    grid-template-rows: 100vh 360vh 40vh;
   }
 }
 main .toggle-responsive {
@@ -302,27 +337,66 @@ header {
   grid-template-rows: 6vh 80vh 14vh;
   grid-template-areas: "nav nav" "h1 profil" "btn btn";
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1350px) {
   header {
     grid-template-columns: 40% 60%;
+    grid-template-areas: "nav nav" "h1 profil" "btn profil";
   }
 }
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1230px) and (max-height: 600px) {
   header {
-    grid-template-rows: 6vh 34vh 55vh 5vh;
-    grid-template-areas: "nav nav" "h1 h1" "profil profil" "btn btn";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40vh 60vh;
+    grid-template-areas: "h1 btn" "profil profil";
   }
 }
 @media screen and (max-width: 900px) {
   header {
-    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30vh 60vh 10vh;
     grid-template-areas: "h1 h1" "profil profil" "btn btn";
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 920px) and (max-height: 1400px) {
+  header {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30vh 60vh 10vh;
+    grid-template-areas: "h1 h1" "profil profil" "btn btn";
+  }
+}
+@media screen and (max-width: 900px) and (max-height: 600px) {
+  header {
+    grid-template-rows: 50vh 100vh 10vh;
+  }
+}
+@media screen and (max-width: 930px) and (max-height: 420px) {
+  header {
+    grid-template-rows: 60vh 100vh 20vh;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 600px) {
+  header {
+    grid-template-rows: 50vh 90vh 10vh;
+  }
+}
+@media screen and (max-width: 750px) and (max-height: 360px) {
+  header {
+    grid-template-rows: 50vh 90vh 50vh;
+  }
+}
+@media screen and (max-width: 360px) {
   header {
     grid-template-rows: 30vh 65vh 5vh;
-    grid-template-areas: "h1 h1" "profil profil" "btn btn";
+  }
+}
+@media screen and (max-width: 395px) and (max-height: 855px) {
+  header {
+    grid-template-rows: 30vh 65vh 5vh;
+  }
+}
+@media screen and (max-width: 670px) and (max-height: 380px) {
+  header {
+    grid-template-rows: 40vh 135vh 5vh;
   }
 }
 header nav {
@@ -381,19 +455,14 @@ header .description {
   transform: translateY(60px);
   position: relative;
 }
-@media screen and (max-width: 1200px) {
-  header .description {
-    width: 95%;
-  }
-}
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 920px) {
   header .description {
     transform: translateY(0px);
   }
 }
 @media screen and (max-width: 900px) {
   header .description {
-    transform: translateY(80px);
+    transform: none;
   }
 }
 header .description #description {
@@ -408,36 +477,52 @@ header .description #description {
 @media screen and (max-width: 1550px) {
   header .description #description {
     margin-top: 0px;
+    line-height: 37px;
   }
 }
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1230px) and (max-height: 600px) {
   header .description #description {
-    line-height: 35px;
+    line-height: 30px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   header .description #description {
     display: none;
+    line-height: 30px;
   }
 }
 header .description .description-responsive {
   display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   header .description .description-responsive {
     display: block;
     border-radius: 5px;
     box-shadow: 3px -2px 4px 1px rgba(12, 149, 164, 0.578);
     text-align: left;
-    line-height: 30px;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 35px;
+    font-size: clamp(1.2rem, 1vw, 2rem);
     padding: 5px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   header .description .description-responsive {
-    transform: translateY(-100px);
+    font-size: clamp(1rem, 1vw, 2rem);
+  }
+}
+@media screen and (max-width: 600px) {
+  header .description .description-responsive {
     line-height: 25px;
+  }
+}
+@media screen and (max-width: 350px) {
+  header .description .description-responsive {
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 800px) {
+  header .description .description-responsive {
+    line-height: 20px;
   }
 }
 header .titre {

@@ -19,4 +19,4 @@ setInterval(function () {
   if (compteur == texte.length) {
     clearInterval(intervalId);
   }
-}, 60);
+}, 5);
